@@ -1,0 +1,21 @@
+{
+  "name": "react-base",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "TONI LIM <tonilim85@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "inotives",
+    "webpack",
+    "react"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.5.0",
+  }
+}
