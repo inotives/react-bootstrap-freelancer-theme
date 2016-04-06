@@ -5,18 +5,23 @@ class PortfolioList extends React.Component {
 
   constructor(props){
     super(props);
-    this.state.portfolioList = [
-      "http://blackrockdigital.github.io/startbootstrap-freelancer/img/portfolio/cabin.png",
-      "http://blackrockdigital.github.io/startbootstrap-freelancer/img/portfolio/cake.png",
-      "http://blackrockdigital.github.io/startbootstrap-freelancer/img/portfolio/circus.png",
-      "http://blackrockdigital.github.io/startbootstrap-freelancer/img/portfolio/game.png",
-      "http://blackrockdigital.github.io/startbootstrap-freelancer/img/portfolio/safe.png",
-      "http://blackrockdigital.github.io/startbootstrap-freelancer/img/portfolio/submarine.png"
-    ]
+    this.state = {
+      portfolioList: [
+        {id: 1, url:"img/portfolio/cabin.png"},
+        {id: 2, url:"img/portfolio/cake.png"},
+        {id: 3, url: "img/portfolio/circus.png"},
+        {id: 4, url: "img/portfolio/game.png"},
+        {id: 5, url: "img/portfolio/safe.png"},
+        {id: 6, url: "img/portfolio/submarine.png"}
+      ]
+    }
   }
 
   render () {
-    if(this.state.portfolioList == "") return "loading...";
+    if(!this.state.portfolioList){
+      return <div>loading...</div>
+    }
+
     return (
       <section id="portfolio">
           <div className="container">
@@ -26,9 +31,9 @@ class PortfolioList extends React.Component {
                       <hr className="star-primary" />
                   </div>
               </div>
-              <div class="row">
+              <div className="row">
                 {
-                  this.state.portfolioList.map((list) => {return <PortfolioListItem imgUrl={list} key={list} />})
+                  this.state.portfolioList.map((list) => {return <PortfolioListItem imgUrl={list.url} key={list.id} modalName={'projmodal'+list.id} />})
                 }
               </div>
           </div>
