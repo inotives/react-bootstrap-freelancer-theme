@@ -10,7 +10,10 @@ class Footer extends React.Component {
                 <div className="row">
                     <div className="footer-col col-md-4">
                         <h3>Location</h3>
-                        <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
+                        <p>3481 Melrose Place
+                          <br/>
+                          Beverly Hills, CA 90210
+                        </p>
                     </div>
                     <div className="footer-col col-md-4">
                         <h3>Around the Web</h3>
